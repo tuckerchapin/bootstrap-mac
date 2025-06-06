@@ -53,7 +53,7 @@ if [[ "$bootstrap_github" =~ ^[Yy]$ ]]; then
   ssh-keygen -t ed25519 -C $GITHUB_EMAIL -f "$GITHUB_KEY_PATH" -P ""
 
   eval "$(ssh-agent -s)"
-  ssh-add $GITHUB_KEY_PATH
+  ssh-add --apple-use-keychain $GITHUB_KEY_PATH
 
   SSH_CONFIG_PATH="$HOME/.ssh/config"
   touch $SSH_CONFIG_PATH
