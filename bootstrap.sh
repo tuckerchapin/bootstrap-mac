@@ -60,7 +60,7 @@ if [[ "$bootstrap_github" =~ ^[Yy]$ ]]; then
   if grep -q "$GITHUB_KEY_PATH" "$SSH_CONFIG_PATH"; then
     echo "Path already added to ssh config. [$SSH_CONFIG_PATH]"
   else
-    printf "Host github.com\n  HostName github.com\n  UseKeychain yes\n AddKeysToAgent yes\n  IdentityFile $GITHUB_KEY_PATH\n" >> "$SSH_CONFIG_PATH"
+    printf "Host github.com\n  HostName github.com\n  UseKeychain yes\n  AddKeysToAgent yes\n  IdentityFile $GITHUB_KEY_PATH\n" >> "$SSH_CONFIG_PATH"
     echo "Added identity to ssh config. [$SSH_CONFIG_PATH]"
   fi
 
