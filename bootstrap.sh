@@ -16,7 +16,7 @@ if [[ "$set_name_choice" =~ ^[Yy]$ ]]; then
   sudo scutil --set HostName $DEVICE_NAME
   sudo scutil --set LocalHostName $DEVICE_NAME
   sudo scutil --set ComputerName $DEVICE_NAME
-  echo "Set host, localhost, and device names to '$DEVICE_NAME'"
+  echo "Set host, localhost, and device names to $(scutil --get HostName)"
 else
   echo "Skipped naming."
 fi
