@@ -11,5 +11,9 @@
 - ...
 - Profit?
 
-### TODO 
+#### TODO 
 - add flags for the script to be truly non-interactive
+- allow some sort of automated follow-up
+- better messaging
+- fancier styling
+- less fragile
